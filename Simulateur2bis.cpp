@@ -52,10 +52,10 @@ public:
             cout << "\n=== Cycle " << cycle << " ===\n";
             logFile << "\n=== Cycle " << cycle << " ===\n";
 
-            // 1️⃣ Allocation inter-files
+            // 1️. Allocation inter-files
             double totalWeight = 0;
             for (auto &q : queues) totalWeight += q.weight;
-
+            // Il s'agit de la formule génerale d'allocation des ressouces
             for (auto &q : queues) {
                 double quota = (q.weight / totalWeight) * totalResource;
                 allocateInQueue(q, quota, unit);
@@ -90,8 +90,8 @@ private:
                 logAllocation(q.name, p.name, alloc);
                 if (p.remaining <= 0) {
                     p.finished = true;
-                    cout << " ⚙️ ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ " << p.name << " terminé.\n";
-                    logFile << " ⚙️ ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ" << p.name << " terminé.\n";
+                    cout << " ⚙️ ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ   " << p.name << " terminé.\n";
+                    logFile << " ⚙️ ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ   " << p.name << " terminé.\n";
                 }
             }
 
@@ -111,8 +111,8 @@ private:
                 logAllocation(q.name, p.name, alloc);
                 if (p.remaining <= 0) {
                     p.finished = true;
-                    cout << " ⚙️ " << p.name << " terminé.\n";
-                    logFile << " ⚙️ " << p.name << " terminé.\n";
+                    cout << " ⚙️ ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ   " << p.name << " terminé.\n";
+                    logFile << " ⚙️ ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ   " << p.name << " terminé.\n";
                 }
             }
         }
