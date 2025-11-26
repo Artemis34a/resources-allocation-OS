@@ -90,8 +90,8 @@ private:
                 logAllocation(q.name, p.name, alloc);
                 if (p.remaining <= 0) {
                     p.finished = true;
-                    cout << " ⚙️ " << p.name << " terminé.\n";
-                    logFile << " ⚙️ " << p.name << " terminé.\n";
+                    cout << " ⚙️ ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ " << p.name << " terminé.\n";
+                    logFile << " ⚙️ ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ" << p.name << " terminé.\n";
                 }
             }
 
