@@ -254,13 +254,13 @@ Exemple :
 Sous Linux / macOS :
 
 ```bash
-g++ -std=c++17 main.cpp -o allocator
+g++ -std=c++17 Sim4.cpp -o allocator
 ```
 
-Windows :
+Windows : 
 
 ```bash
-g++ -std=c++17 main.cpp -o allocator.exe
+g++ -std=c++17 Sim4.cpp -o allocator.exe
 ```
 
 ---
@@ -312,7 +312,7 @@ simulate(5.0, 1000);
 
 ---
 
-## 📌 **7. Points forts de la version v3.0**
+## 📌 **7. Points forts de la version **
 
 ✔ Architecture propre et extensible
 ✔ Dashboard terminal complet

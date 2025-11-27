@@ -63,10 +63,10 @@ public:
         cout << "\033[1;36m"; // Cyan bold
         cout << "\n╔═══════════════════════════════════════════════════════════════════════╗\n";
         cout << "║                                                                       ║\n";
-        cout << "║          🚀  SIMULATEUR CAP-PRO-RATA v3.0 ELITE EDITION  🚀          ║\n";
+        cout << "║          🚀        SIMULATEUR CAP-PRO-RATA                🚀          ║\n";
         cout << "║                                                                       ║\n";
-        cout << "║              Allocation Multi-Niveaux de Ressources                  ║\n";
-        cout << "║                  Modèle Hiérarchique Avancé                          ║\n";
+        cout << "║              Allocation Multi-Niveaux de Ressources                   ║\n";
+        cout << "║                  Akamba Biyembe aka Artemis                           ║\n";
         cout << "║                                                                       ║\n";
         cout << "╚═══════════════════════════════════════════════════════════════════════╝\n";
         cout << "\033[0m"; // Reset
@@ -572,7 +572,7 @@ private:
         cout << "  ✓ allocation_data.json (données structurées)\n\n";
 
         logFile << "\n═══════════════════════════════════════\n";
-        logFile << "RAPPORT FINAL\n";
+        logFile << "RESULTAT FINAL\n";
         logFile << "═══════════════════════════════════════\n";
         logFile << "Cycles totaux: " << currentCycle << "\n";
         logFile << "Tous les processus terminés avec succès.\n";
