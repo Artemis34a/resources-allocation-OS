@@ -9,21 +9,12 @@
 
 ## 📌 **1. Introduction**
 
-Ce projet implémente un **simulateur avancé d’allocation de ressources** dans un système composé de plusieurs files d’attente (queues), chacune ayant :
+Ce projet implémente un **simulateur d’allocation de ressources** dans un système composé de plusieurs files d’attente (queues), chacune ayant :
 
 * des **processus** avec demande, priorité, état, etc.
 * une **politique d’ordonnancement** (RR : Round-Robin ou FIFO)
 * un **poids** permettant de définir la part de ressources à allouer à chaque file
 
-Le système distribue des unités de ressources **à chaque cycle**, selon les quotas pondérés, en simulant :
-
-✔ une grille visuelle dynamique
-✔ un tableau de processus
-✔ un tracking cycle par cycle
-✔ des logs texte + export JSON structuré
-✔ l’évolution des allocations jusqu’à la complétion totale
-
-C’est un excellent modèle pédagogique d’OS / scheduling et un mini-simulateur de QoS multi-niveaux.
 
 ---
 
@@ -34,6 +25,33 @@ Le code est organisé en **4 blocs principaux** :
 ### **2.1 Structures**
 
 Elles modélisent les éléments de la simulation.
+
+```cpp
+    struct Process {
+    string name;
+    double demand;
+    double remaining;
+    int priority;
+    bool finished = false;
+    double allocated = 0.0;
+    int startCycle = -1;
+    int endCycle = -1;
+    double waitTime = 0.0;
+    double basePriority;
+};
+
+struct Queue {
+    string name;
+    vector<Process> processes;
+    double weight;
+    string policy;
+    int rrIndex = 0;
+    double totalAllocated = 0.0;
+    double quota = 0.0;
+    string color;
+    string emoji;
+};
+```
 
 #### 🧱 `struct Process`
 
@@ -270,10 +288,6 @@ g++ -std=c++17 Sim4.cpp -o allocator.exe
 ```bash
 ./allocator
 ```
-
-➡️ Le programme s’autodocumente, demande Entrée entre cycles 1 et 2.
-Les suivants s’enchaînent automatiquement.
-
 ---
 
 ### **6.3 Modifier les files**
@@ -336,10 +350,5 @@ Si tu veux pousser encore plus loin :
 * Simulation parallélisée avec threads
 * Mode “auto” sans Entrée utilisateur
 
-Je peux t’aider à tout implémenter.
-
 ---
 
-# ✅ **README terminé**
-
-Si tu veux une version **EN**, une version **PDF**, ou une version **Markdown GitHub ultra-stylée**, dis-moi et je te les génère.
