@@ -1,0 +1,209 @@
+{
+  "simulation": {
+    "totalResource": 100,
+    "timestamp": "Fri Jan 16 23:07:11 2026
+",
+    "cycles": [
+      {
+        "cycle": 1,
+        "allocations": [
+          {
+            "queue": "File 1 (VVIP)",
+            "quota": 44.4444,
+            "processes": [
+              {"process": "P1", "allocated": 10},
+              {"process": "P2", "allocated": 10},
+              {"process": "P1", "allocated": 10},
+              {"process": "P2", "allocated": 10},
+              {"process": "P1", "allocated": 4.44444}            ]
+          },
+          {
+            "queue": "File 2 (VIP)",
+            "quota": 33.3333,
+            "processes": [
+              {"process": "P3", "allocated": 10},
+              {"process": "P4", "allocated": 10},
+              {"process": "P3", "allocated": 10},
+              {"process": "P4", "allocated": 3.33333}            ]
+          },
+          {
+            "queue": "File 3 (CLASSIC)",
+            "quota": 22.2222,
+            "processes": [
+              {"process": "P5", "allocated": 10},
+              {"process": "P6", "allocated": 10}            ]
+          }
+        ]
+      },
+      {
+        "cycle": 2,
+        "allocations": [
+          {
+            "queue": "File 1 (VVIP)",
+            "quota": 33.0579,
+            "processes": [
+              {"process": "P2", "allocated": 10},
+              {"process": "P1", "allocated": 10},
+              {"process": "P1", "allocated": 10},
+              {"process": "P1", "allocated": 3.05785}            ]
+          },
+          {
+            "queue": "File 2 (VIP)",
+            "quota": 37.1901,
+            "processes": [
+              {"process": "P3", "allocated": 10},
+              {"process": "P4", "allocated": 10},
+              {"process": "P3", "allocated": 10},
+              {"process": "P4", "allocated": 7.19008}            ]
+          },
+          {
+            "queue": "File 3 (CLASSIC)",
+            "quota": 29.7521,
+            "processes": [
+              {"process": "P5", "allocated": 10},
+              {"process": "P6", "allocated": 10}            ]
+          }
+        ]
+      },
+      {
+        "cycle": 3,
+        "allocations": [
+          {
+            "queue": "File 1 (VVIP)",
+            "quota": 5.65301,
+            "processes": [
+              {"process": "P1", "allocated": 2.4977}            ]
+          },
+          {
+            "queue": "File 2 (VIP)",
+            "quota": 40.0283,
+            "processes": [
+              {"process": "P3", "allocated": 10},
+              {"process": "P4", "allocated": 9.47658},
+              {"process": "P3", "allocated": 10}            ]
+          },
+          {
+            "queue": "File 3 (CLASSIC)",
+            "quota": 54.3187,
+            "processes": [
+              {"process": "P5", "allocated": 10}            ]
+          }
+        ]
+      },
+      {
+        "cycle": 4,
+        "allocations": [
+          {
+            "queue": "File 1 (VVIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 2 (VIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 3 (CLASSIC)",
+            "quota": 100,
+            "processes": [
+              {"process": "P5", "allocated": 10}            ]
+          }
+        ]
+      },
+      {
+        "cycle": 5,
+        "allocations": [
+          {
+            "queue": "File 1 (VVIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 2 (VIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 3 (CLASSIC)",
+            "quota": 100,
+            "processes": [
+              {"process": "P5", "allocated": 10}            ]
+          }
+        ]
+      },
+      {
+        "cycle": 6,
+        "allocations": [
+          {
+            "queue": "File 1 (VVIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 2 (VIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 3 (CLASSIC)",
+            "quota": 100,
+            "processes": [
+              {"process": "P5", "allocated": 10}            ]
+          }
+        ]
+      },
+      {
+        "cycle": 7,
+        "allocations": [
+          {
+            "queue": "File 1 (VVIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 2 (VIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 3 (CLASSIC)",
+            "quota": 100,
+            "processes": [
+              {"process": "P5", "allocated": 10}            ]
+          }
+        ]
+      },
+      {
+        "cycle": 8,
+        "allocations": [
+          {
+            "queue": "File 1 (VVIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 2 (VIP)",
+            "quota": 0,
+            "processes": [
+            ]
+          },
+          {
+            "queue": "File 3 (CLASSIC)",
+            "quota": 100,
+            "processes": [
+              {"process": "P5", "allocated": 10}            ]
+          }
+        ]
+      }    ]
+  }
+}

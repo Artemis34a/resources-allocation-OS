@@ -1,0 +1,135 @@
+═══════════════════════════════════════════════════════
+  SIMULATION CAP-PRO-RATA - LOG DÉTAILLÉ
+═══════════════════════════════════════════════════════
+Date de simulation: Fri Jan 16 23:07:11 2026
+Ressource totale: 100 unités
+Aging activé: OUI
+
+═══ CONFIGURATION INITIALE ═══
+File 1 (VVIP) (RR): 2 processus
+File 2 (VIP) (RR): 2 processus
+File 3 (CLASSIC) (FIFO): 2 processus
+
+═══════════════════════════════════════
+CYCLE 1
+═══════════════════════════════════════
+
+[File 1 (VVIP)] Policy: RR | Quota: 44.44
+  ➜ P1 reçoit 10.00 unités
+  ➜ P2 reçoit 10.00 unités
+  ➜ P1 reçoit 10.00 unités
+  ➜ P2 reçoit 10.00 unités
+  ➜ P1 reçoit 4.44 unités
+
+[File 2 (VIP)] Policy: RR | Quota: 33.33
+  ➜ P3 reçoit 10.00 unités
+  ➜ P4 reçoit 10.00 unités
+  ➜ P3 reçoit 10.00 unités
+  ➜ P4 reçoit 3.33 unités
+
+[File 3 (CLASSIC)] Policy: FIFO | Quota: 22.22
+  ➜ P5 reçoit 10.00 unités
+  ➜ P6 reçoit 10.00 unités
+
+═══════════════════════════════════════
+CYCLE 2
+═══════════════════════════════════════
+
+[File 1 (VVIP)] Policy: RR | Quota: 33.06
+  ➜ P2 reçoit 10.00 unités
+     P2 TERMINÉ (durée: 2 cycles)
+  ➜ P1 reçoit 10.00 unités
+  ➜ P1 reçoit 10.00 unités
+  ➜ P1 reçoit 3.06 unités
+
+[File 2 (VIP)] Policy: RR | Quota: 37.19
+  ➜ P3 reçoit 10.00 unités
+  ➜ P4 reçoit 10.00 unités
+  ➜ P3 reçoit 10.00 unités
+  ➜ P4 reçoit 7.19 unités
+
+[File 3 (CLASSIC)] Policy: FIFO | Quota: 29.75
+  ➜ P5 reçoit 10.00 unités
+  ➜ P6 reçoit 10.00 unités
+     P6 TERMINÉ (durée: 2 cycles)
+
+═══════════════════════════════════════
+CYCLE 3
+═══════════════════════════════════════
+
+[File 1 (VVIP)] Policy: RR | Quota: 5.65
+  ➜ P1 reçoit 2.50 unités
+     P1 TERMINÉ (durée: 3 cycles)
+
+[File 2 (VIP)] Policy: RR | Quota: 40.03
+  ➜ P3 reçoit 10.00 unités
+  ➜ P4 reçoit 9.48 unités
+     P4 TERMINÉ (durée: 3 cycles)
+  ➜ P3 reçoit 10.00 unités
+     P3 TERMINÉ (durée: 3 cycles)
+
+[File 3 (CLASSIC)] Policy: FIFO | Quota: 54.32
+  ➜ P5 reçoit 10.00 unités
+
+═══════════════════════════════════════
+CYCLE 4
+═══════════════════════════════════════
+
+[File 1 (VVIP)] Policy: RR | Quota: 0.00
+
+[File 2 (VIP)] Policy: RR | Quota: 0.00
+
+[File 3 (CLASSIC)] Policy: FIFO | Quota: 100.00
+  ➜ P5 reçoit 10.00 unités
+
+═══════════════════════════════════════
+CYCLE 5
+═══════════════════════════════════════
+
+[File 1 (VVIP)] Policy: RR | Quota: 0.00
+
+[File 2 (VIP)] Policy: RR | Quota: 0.00
+
+[File 3 (CLASSIC)] Policy: FIFO | Quota: 100.00
+  ➜ P5 reçoit 10.00 unités
+
+═══════════════════════════════════════
+CYCLE 6
+═══════════════════════════════════════
+
+[File 1 (VVIP)] Policy: RR | Quota: 0.00
+
+[File 2 (VIP)] Policy: RR | Quota: 0.00
+
+[File 3 (CLASSIC)] Policy: FIFO | Quota: 100.00
+  ➜ P5 reçoit 10.00 unités
+
+═══════════════════════════════════════
+CYCLE 7
+═══════════════════════════════════════
+
+[File 1 (VVIP)] Policy: RR | Quota: 0.00
+
+[File 2 (VIP)] Policy: RR | Quota: 0.00
+
+[File 3 (CLASSIC)] Policy: FIFO | Quota: 100.00
+  ➜ P5 reçoit 10.00 unités
+
+═══════════════════════════════════════
+CYCLE 8
+═══════════════════════════════════════
+
+[File 1 (VVIP)] Policy: RR | Quota: 0.00
+
+[File 2 (VIP)] Policy: RR | Quota: 0.00
+
+[File 3 (CLASSIC)] Policy: FIFO | Quota: 100.00
+  ➜ P5 reçoit 10.00 unités
+     P5 TERMINÉ (durée: 8 cycles)
+
+
+═══════════════════════════════════════
+RESULTAT FINAL
+═══════════════════════════════════════
+Cycles totaux: 8
+Tous les processus terminés avec succès.

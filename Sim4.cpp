@@ -63,7 +63,7 @@ public:
         cout << "\033[1;36m"; // Cyan bold
         cout << "\n╔═══════════════════════════════════════════════════════════════════════╗\n";
         cout << "║                                                                       ║\n";
-        cout << "║          🚀        SIMULATEUR CAP-PRO-RATA                🚀          ║\n";
+        cout << "║                  SIMULATEUR CAP-PRO-RATA                              ║\n";
         cout << "║                                                                       ║\n";
         cout << "║              Allocation Multi-Niveaux de Ressources                   ║\n";
         cout << "║                  Akamba Biyembe aka Artemis                           ║\n";
@@ -106,7 +106,7 @@ public:
     }
 
     static void printResourceGrid(double totalResource, const vector<Queue>& queues, int gridWidth = 60) {
-        cout << "\n\033[1;35m📊 DISTRIBUTION DES RESSOURCES\033[0m\n";
+        cout << "\n\033[1;35m DISTRIBUTION DES RESSOURCES\033[0m\n";
         cout << "   Total disponible: \033[1;33m" << fixed << setprecision(1) 
              << totalResource << " unités\033[0m\n\n";
         
@@ -172,7 +172,7 @@ public:
                 totalAllocated += p.allocated;
             }
             
-            cout << "  📊 Stats: " << completed << "/" << total << " terminés"
+            cout << "   Stats: " << completed << "/" << total << " terminés"
                  << " │ Total alloué: " << fixed << setprecision(1) << totalAllocated 
                  << "/" << totalDemand << " unités\n\n";
         }
@@ -214,7 +214,7 @@ public:
     }
 
     static void printCycleMetrics(int cycle, const CycleStats& stats, double totalResource) {
-        cout << "\n\033[1;35m📈 MÉTRIQUES DU CYCLE " << cycle << "\033[0m\n";
+        cout << "\n\033[1;35m MÉTRIQUES DU CYCLE " << cycle << "\033[0m\n";
         cout << "  ┌─────────────────────────────────────────────┐\n";
         cout << "  │ Processus actifs    : " << setw(18) << right << stats.activeProcesses << "  │\n";
         cout << "  │ Ressources allouées : " << setw(15) << fixed << setprecision(2) 
@@ -284,7 +284,7 @@ public:
         Display::printBanner();
         Display::printHeader("🔧 CONFIGURATION INITIALE DU SYSTÈME");
         
-        cout << "\n\033[1;37m📦 FILES D'ATTENTE CONFIGURÉES:\033[0m\n\n";
+        cout << "\n\033[1;37m FILES D'ATTENTE CONFIGURÉES:\033[0m\n\n";
         
         double totalWeight = 0;
         for(const auto& q : queues) totalWeight += q.weight;
@@ -335,7 +335,7 @@ public:
         if(!autoMode) {
             cout << "\n\n";
             Display::printSeparator('═');
-            cout << "\033[1;33m⚡ Appuyez sur ENTRÉE pour démarrer la simulation...\033[0m\n";
+            cout << "\033[1;33m Appuyez sur ENTRÉE pour démarrer la simulation...\033[0m\n";
             Display::printSeparator('═');
             cin.get();
         } else {
@@ -352,7 +352,7 @@ public:
             if(!autoMode && currentCycle == 1) {
                 cout << "\n\n";
                 Display::printSeparator('═');
-                cout << "\033[1;33m⏭️  Appuyez sur ENTRÉE pour continuer...\033[0m\n";
+                cout << "\033[1;33m⏭ Appuyez sur ENTRÉE pour continuer...\033[0m\n";
                 Display::printSeparator('═');
                 cin.ignore();
                 cin.get();
@@ -366,7 +366,7 @@ private:
     void runCycle(double unit) {
         Display::clearScreen();
         Display::printBanner();
-        Display::printHeader("🔄 CYCLE D'ALLOCATION", currentCycle);
+        Display::printHeader(" CYCLE D'ALLOCATION", currentCycle);
 
         CycleStats stats;
         stats.cycleNumber = currentCycle;
@@ -470,7 +470,7 @@ private:
                 if(p.remaining <= 0) {
                     p.finished = true;
                     p.endCycle = currentCycle;
-                    logFile << "    ✅ " << p.name << " TERMINÉ (durée: " 
+                    logFile << "     " << p.name << " TERMINÉ (durée: " 
                            << (p.endCycle - p.startCycle + 1) << " cycles)\n";
                 }
                 consecutiveSkips = 0;
@@ -501,7 +501,7 @@ private:
                 if(p.remaining <= 0) {
                     p.finished = true;
                     p.endCycle = currentCycle;
-                    logFile << "    ✅ " << p.name << " TERMINÉ (durée: " 
+                    logFile << "     " << p.name << " TERMINÉ (durée: " 
                            << (p.endCycle - p.startCycle + 1) << " cycles)\n";
                 }
             }
@@ -521,14 +521,13 @@ private:
     void showFinalReport() {
         Display::clearScreen();
         Display::printBanner();
-        Display::printHeader("🏆 RAPPORT FINAL DE SIMULATION");
+        Display::printHeader(" RAPPORT FINAL DE SIMULATION");
 
-        cout << "\n\033[1;32m✅ Simulation terminée avec succès!\033[0m\n";
-        cout << "   📊 Cycles totaux: \033[1;33m" << currentCycle << "\033[0m\n\n";
+        cout << "\n\033[1;32m Simulation terminée avec succès!\033[0m\n";
+        cout << "   Cycles totaux: \033[1;33m" << currentCycle << "\033[0m\n\n";
 
         Display::printSeparator('═');
-        cout << "\n\033[1;36m📈 STATISTIQUES GLOBALES PAR FILE\033[0m\n\n";
-
+        cout << "\n\033[1;36m STATISTIQUES GLOBALES PAR FILE\033[0m\n\n";
         for(const auto& q : queues) {
             cout << "  " << q.emoji << " " << q.color << q.name << "\033[0m\n";
             cout << "     ├─ Ressources allouées : " << fixed << setprecision(2) 
@@ -567,7 +566,7 @@ private:
         }
 
         Display::printSeparator('═');
-        cout << "\n\033[1;33m💾 FICHIERS GÉNÉRÉS\033[0m\n";
+        cout << "\n\033[1;33m FICHIERS GÉNÉRÉS\033[0m\n";
         cout << "  ✓ allocation_log.txt  (journal détaillé)\n";
         cout << "  ✓ allocation_data.json (données structurées)\n\n";
 
@@ -581,6 +580,7 @@ private:
 
 // ==================== MAIN ====================
 int main() {
+    // C'est ici que tous les dtests dont runs et planifiés.
     Display::clearScreen();
     Display::printBanner();
     
@@ -643,7 +643,7 @@ int main() {
     cout << "  ✓ Ressource totale: 100.0 unités\n\n";
 
     // Lancement de la simulation
-    allocator.simulate(10.0, 2000, false); // quantum=10, délai=2s, mode manuel
+    allocator.simulate(10.0, 2000, true); // quantum=10, délai=2s, mode manuel
 
     return 0;
 }
